@@ -15,7 +15,7 @@ jobs:
           node-version: lts/*
   
       - name: Install browser dependencies
-        run: npx playwright install-deps npx playwright install-deps chromium
+        run: npx playwright install-deps chromium
 
       - uses: microsoft/playwright-github-action@v1
       
