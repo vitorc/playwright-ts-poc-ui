@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "yarn playwright test --reporter=line,allure-playwright",
-    "parallel-test": "yarn playwright test --headed --workers 3 --reporter=line,allure-playwright"
+    "test": "yarn playwright test",
+    "parallel-test": "yarn playwright test --headed --workers 3"
   },
   "author": "Vitor C",
   "license": "ISC",
