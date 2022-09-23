@@ -4,12 +4,6 @@ import { devices } from '@playwright/test';
 const config: PlaywrightTestConfig = {
   testDir: './tests',
   outputDir: '/playwright-report',
-  reporter: [
-    ['html'],
-    ['list'],
-    ['./my-awesome-reporter.js'],
-    ['allure-playwright', { outputFolder: 'allure-results' }]
-  ],
   timeout: 30 * 1000,
   fullyParallel: true,
   expect: {
