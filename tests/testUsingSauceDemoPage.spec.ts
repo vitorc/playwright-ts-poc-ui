@@ -9,11 +9,11 @@ test.describe("Suite with saucedemo page tests",()=>{
         const passwordField = page.locator("#password");
         const loginButton = page.locator("#login-button")
         await page.goto("/");
-        await expect(page).toHaveTitle(/Swag Laqweqwebs/);
+        await expect(page).toHaveTitle(/Swag Labs/);
         await userNameField.fill("standard_user");
         await passwordField.fill("secret_sauce");
         await loginButton.click();
-        await expect(page).toHaveTitle(/Swag Laqw3bs/);
+        await expect(page).toHaveTitle(/Swag Labs/);
     })
     test.afterAll(async()=>{
         const browser = await chromium.launch();
