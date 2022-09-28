@@ -1,5 +1,4 @@
 import type { PlaywrightTestConfig } from '@playwright/test';
-import { devices } from '@playwright/test';
 
 const config: PlaywrightTestConfig = {
   testDir: './tests',
@@ -8,23 +7,12 @@ const config: PlaywrightTestConfig = {
   expect: {
     timeout: 5000
   },
-
   use:{
-    ...devices['Desktop Chrome'],
           headless: true,
-          browserName: "chromium",
-              baseURL:"https://www.saucedemo.com/",
-          // baseURL:"https://playwright.dev",
-          screenshot: "only-on-failure",
-          trace:"retain-on-failure",
-          launchOptions: {
-            args: ["--start-maximized"],
-            logger: {
-              isEnabled: (name, severity) => true,
-              log:(name,severity,message,args) => console.log(name,severity)
-            },
-          },
+          browserName: 'chromium',
+          baseURL: 'https://www.saucedemo.com/',
+          screenshot: 'only-on-failure',
+          trace:'on'
         },
 };
-
 export default config;

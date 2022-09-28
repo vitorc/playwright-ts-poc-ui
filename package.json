@@ -5,13 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "yarn playwright test",
-    "parallel-test": "yarn playwright test --headed --workers 3"
+    "parallel-test": "yarn playwright test --workers 3"
   },
   "author": "Vitor C",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.25.2",
-    "playwright": "^1.25.2",
-    "allure-playwright": "^2.0.0-beta.19"
+    "playwright": "^1.25.2"
   }
 }

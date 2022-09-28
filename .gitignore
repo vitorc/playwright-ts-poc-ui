@@ -164,8 +164,6 @@ dist
 *.code-workspace
 #Playwright
 node_modules/
-/test-results/
-/playwright-report/
 /playwright/.cache/
 #folders
 .vscode/
