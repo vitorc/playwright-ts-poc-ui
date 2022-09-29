@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "yarn playwright test",
+    "test":"yarn playwright test --workers 3",
     "parallel-test": "yarn playwright test --workers 3"
   },
   "author": "Vitor C",

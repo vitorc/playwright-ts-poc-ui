@@ -1,18 +1,13 @@
 import {chromium, test, expect } from '@playwright/test';
-
+import { loginElements } from '../pageObjects/pages/login.page'
 
 test.describe("Suite with saucedemo page tests",()=>{
     test.beforeEach(async({page}, testInfo)=>{
-       
+       const loginPage = new loginElements(page);
         console.log(`Running ${testInfo.title}`);
-        const userNameField  = page.locator("#user-name");
-        const passwordField = page.locator("#password");
-        const loginButton = page.locator("#login-button")
         await page.goto("/");
         await expect(page).toHaveTitle(/Swag Labs/);
-        await userNameField.fill("standard_user");
-        await passwordField.fill("secret_sauce");
-        await loginButton.click();
+        await loginPage.DoALogin();
         await expect(page).toHaveTitle(/Swag Labs/);
     })
     test.afterAll(async()=>{
